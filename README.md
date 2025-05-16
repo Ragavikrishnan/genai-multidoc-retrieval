@@ -4,34 +4,41 @@
 To design and implement a multidocument retrieval agent using LlamaIndex to extract and synthesize information from multiple research articles, and to evaluate its performance by testing it with diverse queries, analyzing its ability to deliver concise, relevant, and accurate responses.
 
 ### PROBLEM STATEMENT:
-
 Accessing and synthesizing information from multiple documents is crucial for research, but manual analysis is time-consuming. A multidocument retrieval agent can automate this process by:
 
-1. Parsing and indexing multiple research articles.
-2. Enabling users to ask queries in natural language.
-3. Providing synthesized, concise, and accurate responses from the indexed documents.
-
+   1.Parsing and indexing multiple research articles.
+   
+   2.Enabling users to ask queries in natural language.
+   
+   3.Providing synthesized, concise, and accurate responses from the indexed documents.
+   
 The effectiveness of the system will be evaluated through diverse queries to test its accuracy and relevance.
 
 ### DESIGN STEPS:
-
-#### STEP 1: Load and Parse Research Articles
+## STEP 1: Load and Parse Research Articles
 Use LlamaIndex's document loaders to read and parse multiple research articles in PDF or text format.
 
-#### STEP 2: Create a Unified Index
+## STEP 2: Create a Unified Index
 Combine and index content from all documents using LlamaIndex to enable cross-document retrieval.
 
-#### STEP 3: Set Up a Query Engine
+## STEP 3: Set Up a Query Engine
 Configure a query engine to allow natural language questions and retrieve relevant content.
 
-#### STEP 4: Implement the Retrieval Agent
+## STEP 4: Implement the Retrieval Agent
 Build a retrieval agent that extracts and synthesizes information from the index.
 
-#### STEP 5: Evaluate the Agent
+## STEP 5: Evaluate the Agent
 Test the agent with diverse queries to evaluate the quality of its responses.
-
 ### PROGRAM:
 ```
+Developed By:RAGAVI K
+Reg No:212223040161
+
+from helper import get_openai_api_key
+OPENAI_API_KEY = get_openai_api_key()
+
+import nest_asyncio
+nest_asyncio.apply()
 urls = [
     "https://openreview.net/pdf?id=VtmBAGCN7o",
     "https://openreview.net/pdf?id=6PmJoRfdaK",
@@ -81,16 +88,9 @@ response = agent.query(
     "in MetaGPT and compare it against SWE-Bench"
 )
 print(str(response))
-```
-
+``` 
 ### OUTPUT:
-
-![exp-4 op1](https://github.com/user-attachments/assets/7e8f628a-b364-47d6-b5d3-29d7ffc45215)
-
-![exp-4 op2](https://github.com/user-attachments/assets/8f1f174c-68a4-4342-8bfd-95c8d0ffb5ad)
-
-![exp-4 op3](https://github.com/user-attachments/assets/51268415-5721-4abc-87da-3a0dc54d4d59)
+![Screenshot 2025-05-10 114620](https://github.com/user-attachments/assets/c2eee67b-d181-4584-977c-3113a1eebe86)
 
 ### RESULT:
-
 Thus, a multidocument retrieval agent using LlamaIndex to extract and synthesize information from multiple research articles is designed and implemented successfully.
